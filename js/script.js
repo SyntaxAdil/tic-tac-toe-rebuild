@@ -32,7 +32,7 @@ let turnX = true;
 // function for show turn
 
 const turnIndicate=()=>{
-    turnIndicator.innerText=turnX===false?"X":"O";
+  turnIndicator.innerText=turnX===false?"X":"O";
 }
 
 // function for changing turn
@@ -106,8 +106,8 @@ boxes.forEach((box) => {
 
 // function for reset
 const resetGame = () => {
-turnIndicate();
   turnX = true;
+  turnIndicator.innerText=turnX===true?"X":"O";
   gameOver = false;
   boxes.forEach((e) => (e.disabled = false));
   boxes.forEach((e) => (e.innerText = ""));
