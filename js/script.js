@@ -74,6 +74,7 @@ const checkWinner = () => {
         showMssg.innerHTML = `Congratulation <span> ${pos1Val} </span>`;
         boxes.forEach((e) => (e.disabled = true));
         gameOver = true;
+        turnX=true;
         return;
       }
     }
@@ -88,6 +89,7 @@ const checkDraw = () => {
     if (e.innerText === "") allFiled = false;
   });
   if (allFiled && gameOver == false) {
+    turnX=true;
     showMssg.classList.add("show-draw");
     showMssg.innerHTML = `It's a <span> Draw </span>`;
     boxes.forEach((e) => (e.disabled = true));
